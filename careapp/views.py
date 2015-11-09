@@ -47,6 +47,13 @@ class ChildPickerView(ListView):   # test of children list
     model = Child
     template_name = 'careapp/childs_picker.html'
 
+    def url_1(request):
+        unit = DailyReport.objects.get(pk=1)
+        unit.date = request.POST['date']
+        unit.name = request.POST['name']
+        unit.save()
+        return HttpResponse('ok')
+
 
 class ChildCreateView(ChildActionMixin, CreateView):
 

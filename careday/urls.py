@@ -43,7 +43,7 @@ urlpatterns = [
     url(r'^diapering/new$', DiaperingCreateView.as_view(), name='diapering',),
     url(r'^sleeping/new$', SleepingCreateView.as_view(), name='sleeping',),
     url(r'^eating/new$', EatingCreateView.as_view(), name='eating',),
-    url(r'^calander/child', ChildPickerView.as_view(
+    url(r'^calander/child$', ChildPickerView.as_view(
         template_name='careapp/childs_picker.html'), name='child-picker',),
     # url(r'^calander/(?P<id>\d+)$', ChildPickerView.as_view(
     #     template_name='careapp/childs_picker.html'), name='child-picker',),
