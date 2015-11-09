@@ -42,6 +42,12 @@ class ChildListView(ListView):
     template_name = 'careapp/childs_list.html'
 
 
+class ChildPickerView(ListView):   # test of children list
+
+    model = Child
+    template_name = 'careapp/childs_picker.html'
+
+
 class ChildCreateView(ChildActionMixin, CreateView):
 
     model = Child

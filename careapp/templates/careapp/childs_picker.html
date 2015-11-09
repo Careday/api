@@ -13,13 +13,14 @@
 </ul>
 {% endif %} -->
 
-<h1>Children</h1>
+<h1>Children Selector</h1>
 <ul>
   {% for child in object_list %}
-  <li class="child">{{ child }} birthday: {{ child.birthday }}  <a href="/child/update/{{ child.id }}/">  update child</a></li>
+  <li class="child"> <a href="{% url "daily-report" %}"> {{ child }} </a> birthday: {{ child.birthday }} </li>
+  <!-- <li class="child"> <a href="{{ child.id }}"> {{ child }} </a> birthday: {{ child.birthday }} </li> -->
   {% endfor %}
 </ul>
-<a href="{% url "child-new" %}">add child</a>
+<!-- <a href="{% url "daily-report" %}">add daily report for {{ child }}</a> -->
 
-{# <a href="{% url "childs_new" %}">childs_new</a>#}
+<!-- {# <a href="{% url "childs_new" %}">childs_new</a>#} -->
 {% endblock %}
